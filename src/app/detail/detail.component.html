@@ -1,0 +1,15 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-8">
+      <h1> {{ post.title}}</h1>
+      <h2>Nb likes : {{ post.like }}</h2>
+      {{ post.description }}
+    </div>
+    <div class="col-4">
+      <img src="{{ post.picture }}" alt="" class="w-100">
+    </div>
+  </div>
+  <div class="row">
+    <button [routerLink]="['/list']" routerLinkActive="router-link-active" class="btn btn-info" >Retour aux films</button>
+  </div>
+</div>

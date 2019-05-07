@@ -1,0 +1,42 @@
+<!-- div.container>div.row>div.col-12 -->
+<div class="container">
+  <div class="row" *ngFor="let post of posts; let i = index" >
+    <div class="col-12 card my-3">
+      <div class="row p-3" [ngClass]="{'bg-success': post.like>0,'bg-danger':post.like<0}">
+      <div class="col-12">
+      <h2><a [routerLink]="['/detail',i]">{{ post.title }}</a></h2>
+    </div>
+    <div class="col-6">
+      {{ post.author }}
+    </div>
+    <div class="col-5">
+      {{ post.date | date:'dd/MM/y' }}
+    </div>
+    <!-- <div class="col-1">
+      <button class="btn-primary" (click)="deletePost(i)" *ngIf="connection == true">X</button>
+    </div> -->
+    <div class="col-12">
+      {{ post.resume }}
+    </div>
+    <div class="col-12">
+      Nombre de likes = {{ post.like }}
+    </div>
+    <div class="col-3">
+      <button class="btn btn-success" (click)="addLike(i)">Like</button>
+    </div>
+    <div class="col-3">
+        <button class="btn btn-warning" (click)="disLike(i)">DisLike</button>
+    </div>
+    <!-- <div class="col-4">
+        <button class="btn btn-secondary" [routerLink]="['/edit',i]" routerLinkActive="router-link-active">Edit</button>
+      </div> -->
+      <div class="col-3">
+          <button class="btn btn-danger" (click)="onDeletePost(i)" >Delete</button>
+      </div>
+      <div class="col-3">
+          <button class="btn btn-info" (click)="onEditPost(i)" >Edit</button>
+      </div>
+  </div>
+
+</div>
+</div>

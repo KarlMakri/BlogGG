@@ -1,0 +1,36 @@
+<div class="container">
+  <br>
+    <div class="row" class="form-control"><br>
+      <form (ngSubmit)="OnSubmit(f)" #f="ngForm">
+        <br>
+        <div class="col-12">
+            <label for="title">Titre</label>
+            <input type="text" name="title" class="w-100" ngModel class="form-control">
+        </div>
+        <div class="col-12">
+          <label for="resume">Resume</label>
+          <input type="text" name="resume" class="w-100" ngModel class="form-control">
+        </div>
+        <div class="col-12">
+          <label for="description">Description</label>
+          <textarea  name="description" id="" row="10" class="w-100" ngModel class="form-control"></textarea>
+        </div>
+        <div class="col-6">
+          <label for="author">Author</label>
+          <input type="text" name="author" ngModel class="form-control">
+        </div>
+        <div class="col-6">
+          <label for="date">Date</label>
+          <input type="date" name="date" ngModel class="form-control">
+        </div>
+        <div class="col-12">
+          <label for="picture">Picture</label>
+          <input type="picture" name="picture" ngModel class="form-control">
+        </div>
+        <div class="col-12">
+          <input type="hidden" name="like" value="0" ngModel class="form-control"><br>
+          <button type="submit" class="btn btn-success">Add</button>
+        </div>
+      </form>
+    </div>
+</div>
